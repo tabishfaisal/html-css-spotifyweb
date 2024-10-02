@@ -4,9 +4,156 @@
     color: currentColor;
     text-decoration: none;
 }
-img{
-    width: 100%;
-}
 ul.ol{
     list-style: none;
+}
+/*--resetting Css--*/
+/*--starting spotify application--*/
+
+.layout-body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.layout-main{
+    flex-grow: 1;
+    display: flex;
+}
+.side-navbar{
+    width: 250px;
+    background-color:#000000;
+}
+.content{
+    background-color: #141922;
+    flex-grow: 1;
+}
+.layout-player{
+    min-height: 50px;
+    background-color:#282828;
+}
+.logo-img{
+    height: 50px;
+    width: 135px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+.home-img{
+    height: 30px;
+    width: 50px;
+}
+.home-text{
+    font-size: 14px;
+    color: white;
+}
+.sidebar-home{
+    display: flex;
+    align-items: center;
+}
+.cerca-img{
+    height: 30px;
+    width: 50px;
+}
+.cerca-text{
+    font-size: 14px;
+    color: lightslategray;
+}
+.sidebar-cerca{
+    display: flex;
+    align-items: center;
+}
+.library-img{
+    height: 30px;
+    width: 50px;
+}
+.library-text{
+    font-size: 14px;
+    color: lightslategray;
+}
+.sidebar-library{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+/*--playlist section--*/
+.playlist-text{
+    font-size: 16px;
+    color: white;
+}
+.fa-sharp{
+    font-size: 18px;
+}
+.play-text{
+    font-size: 12px;
+    color: lightslategray;
+}
+.sidebar-playlist{
+    padding-left: 10px;
+}
+.name-playlist{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.download-img{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+}
+.download-app{
+    font-size: 12px;
+    color: lightslategray;
+}
+.download{
+    margin-top: 100%;
+    display: flex;
+    align-items: center;
+}
+.profile-pic{
+    color: lightslategray;
+    height: 15px;
+    width: 15px;
+    background-color: lightslategray;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+.profile-name{
+    font-size: 12px;
+    color: white;
+}
+.download-2{
+    display: flex;
+    align-items: center;
+}
+hr{
+    border: none;
+    border-bottom: 1px solid lightslategray;
+    margin: 10px 0;
+}
+@media (max-width:450px) {
+    .logo-img{
+     display: none;
+     display: url(./spotify-imgs/img/logo-small.svg);
+    }
+    .home-text{
+        display: none;
+    }
+    .cerca-text{
+        display: none;
+    }
+    .library-text{
+        display: none;
+    }
+    .name-playlist{
+        display: none;
+    }
+    .download-app{
+        display: none;
+    }
+    .profile-name{
+        display: none;
+    }
+    .download-img{
+        margin-top: 100%;
+    }
+    
 }
