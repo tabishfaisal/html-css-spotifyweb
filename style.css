@@ -1,5 +1,4 @@
 *{
-    margin: 0%;
     padding: 0%;
     color: currentColor;
     text-decoration: none;
@@ -7,35 +6,91 @@
 ul.ol{
     list-style: none;
 }
+html{
+    font-family: sans-serif;
+}
+img{
+    width: 100%;
+}
 /*--resetting Css--*/
 /*--starting spotify application--*/
-
-.layout-body{
+.layout-main{
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-}
-.layout-main{
     flex-grow: 1;
-    display: flex;
+    margin: 0;
+    padding: 0%;
 }
-.side-navbar{
-    width: 250px;
-    background-color:#000000;
+.layout-body{
+    display: flex;
+    height: 100vh;
 }
 .content{
-    background-color: #141922;
+    background-color: rgb(20, 25, 34);
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
+
 }
+.side-navbar{
+    background-color:#000000;
+    width: 250px;
+    flex-shrink: none;
+    display: flex;
+    flex-direction: column;
+
+}
+/*--starting section player--*/
 .layout-player{
-    min-height: 50px;
     background-color:#282828;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+}
+.ablum-img{
+    height: 40px;
+    width: 40px;
+    margin: 0%;
+    padding: 10px;
+}
+.artist>*{
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+}
+.artist .sinister{
+    padding-top: 15px;
+    color: white;
+    margin: 0% auto;
+}
+.artist .brano{
+    color: lightslategray;
+    margin-top: 0;
+    margin-left: 0;
+}
+.ablum-icon .fa-folder{
+    color: lightslategray;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.ablum-icon .fa-heart{
+    color: lightslategray;
+    margin-left: 40px;
+    margin-top: 25px;
+    margin-right: 10ox;
+}
+.sidebar-logo{
+    display: flex;
 }
 .logo-img{
     height: 50px;
     width: 135px;
-    padding-bottom: 20px;
     padding-left: 10px;
+}
+.logo-img-sm{
+    display: none;
 }
 .home-img{
     height: 30px;
@@ -92,21 +147,27 @@ ul.ol{
 .name-playlist{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 .download-img{
     height: 15px;
     width: 15px;
     margin-right: 5px;
 }
+.download-link{
+    border-bottom: 1px solid lightslategrey;
+}
 .download-app{
     font-size: 12px;
     color: lightslategray;
 }
 .download{
-    margin-top: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: auto;
 }
 .profile-pic{
     color: lightslategray;
@@ -115,24 +176,21 @@ ul.ol{
     background-color: lightslategray;
     border-radius: 10px;
     margin-right: 5px;
+    margin-top: 5px;
 }
 .profile-name{
     font-size: 12px;
     color: white;
 }
-.download-2{
-    display: flex;
-    align-items: center;
-}
-hr{
-    border: none;
-    border-bottom: 1px solid lightslategray;
-    margin: 10px 0;
-}
 @media (max-width:450px) {
+
     .logo-img{
-     display: none;
-     display: url(./spotify-imgs/img/logo-small.svg);
+        display: none;
+    }
+    .logo-img-sm{
+        display: block;
+        height: 35px;
+        margin: 10px;
     }
     .home-text{
         display: none;
@@ -143,7 +201,7 @@ hr{
     .library-text{
         display: none;
     }
-    .name-playlist{
+    .sidebar-playlist{
         display: none;
     }
     .download-app{
@@ -152,8 +210,15 @@ hr{
     .profile-name{
         display: none;
     }
-    .download-img{
-        margin-top: 100%;
+    .side-navbar{
+        width: 50px;
     }
-    
-}
+    .download{
+        margin-top: auto;
+        display: flex;
+        align-items: center;
+    }
+    .layout-body{
+        height: 100vh;
+    }
+    /*--section player query--*/
